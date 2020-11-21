@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MusicStore</name>
+    </assembly>
+    <members>
+        <member name="T:MusicStore.Controllers.WeatherForecastController">
+            <summary>
+            This controller is for anything and everything dealing with the weather.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{MusicStore.Controllers.WeatherForecastController})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Controllers.WeatherForecastController"/> class.
+            </summary>
+            <param name="logger">The default logging mechanism.</param>
+        </member>
+        <member name="M:MusicStore.Controllers.WeatherForecastController.Get">
+            <summary>
+            This method gets data.
+            </summary>
+            <returns>Some mocked up data to be returned.</returns>
+        </member>
+        <member name="T:MusicStore.Models.Album">
+            <summary>
+            This class models an album.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Album.AlbumId">
+            <summary>
+            Gets or sets the album ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Album.Title">
+            <summary>
+            Gets or sets the title of the album.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Album.ArtistId">
+            <summary>
+            Gets or sets the artist ID.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Artist">
+            <summary>
+            This class models the artist.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Artist.ArtistId">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Artist.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Customer">
+            <summary>
+            This class models a customer.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.CustomerId">
+            <summary>
+            Gets or sets the customer ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Company">
+            <summary>
+            Gets or sets the company.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Address">
+            <summary>
+            Gets or sets the address.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.City">
+            <summary>
+            Gets or sets the city.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.State">
+            <summary>
+            Gets or sets the state.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Country">
+            <summary>
+            Gets or sets the country.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.PostalCode">
+            <summary>
+            Gets or sets the postal code.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Phone">
+            <summary>
+            Gets or sets the phone number.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Fax">
+            <summary>
+            Gets or sets the fax number.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.SupportRepId">
+            <summary>
+            Gets or sets the support representative ID.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Employee">
+            <summary>
+            This class models the employee.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.EmployeeId">
+            <summary>
+            Gets or sets the employee ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Title">
+            <summary>
+            Gets or sets the job title.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.ReportsTo">
+            <summary>
+            Gets or sets the superior.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.BirthDate">
+            <summary>
+            Gets or sets the birth date.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.HireDate">
+            <summary>
+            Gets or sets the hire date.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Address">
+            <summary>
+            Gets or sets the address.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.City">
+            <summary>
+            Gets or sets the city.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.State">
+            <summary>
+            Gets or sets the state.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Country">
+            <summary>
+            Gets or sets the country.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.PostalCode">
+            <summary>
+            Gets or sets the postal code.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Phone">
+            <summary>
+            Gets or sets the phone.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Fax">
+            <summary>
+            Gets or sets the fax number.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Genre">
+            <summary>
+            This class models the genre.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Genre.GenreId">
+            <summary>
+            Gets or sets the genre ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Genre.Name">
+            <summary>
+            Gets or sets the genre name.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Invoice">
+            <summary>
+            This class models an invoice.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.InvoiceId">
+            <summary>
+            Gets or sets the invoice ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.CustomerId">
+            <summary>
+            Gets or sets the customer ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.InvoiceDate">
+            <summary>
+            Gets or sets the invoice date.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.BillingAddress">
+            <summary>
+            Gets or sets the billing address.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.BillingCity">
+            <summary>
+            Gets or sets the billing city.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.BillingState">
+            <summary>
+            Gets or sets the billing state.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.BillingCountry">
+            <summary>
+            Gets or sets the billing country.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.BillingPostalCode">
+            <summary>
+            Gets or sets the postal code.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.Total">
+            <summary>
+            Gets or sets the total.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.InvoiceItem">
+            <summary>
+            This class models an invoice line item.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.MediaType">
+            <summary>
+            This class represents the media type.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.MediaType.MediaTypeId">
+            <summary>
+            Gets or sets the media type ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.MediaType.Name">
+            <summary>
+            Gets or sets the name of the media type.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Playlist">
+            <summary>
+            This class models a playlist.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Playlist.PlaylistId">
+            <summary>
+            Gets or sets the playlist ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Playlist.Name">
+            <summary>
+            Gets or sets the playlist name.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.PlaylistTrack">
+            <summary>
+            This class models a playlist track.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.PlaylistTrack.PlaylistId">
+            <summary>
+            Gets or sets the playlist ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.PlaylistTrack.TrackId">
+            <summary>
+            Gets or sets the track ID.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Track">
+            <summary>
+            This class models a track.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.TrackId">
+            <summary>
+            Gets or sets the track ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.AlbumId">
+            <summary>
+            Gets or sets the album ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.MediaTypeId">
+            <summary>
+            Gets or sets the media type ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.GenreId">
+            <summary>
+            Gets or sets the genre ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.Composer">
+            <summary>
+            Gets or sets the composer.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.Milliseconds">
+            <summary>
+            Gets or sets the duration of the song in milliseconds.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.Bytes">
+            <summary>
+            Gets or sets the size of the song (file size).
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.UnitPrice">
+            <summary>
+            Gets or sets the price of the song.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Program">
+            <summary>
+            This is the driver class.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Program.Main(System.String[])">
+            <summary>
+            This is the main entry point of execution.
+            </summary>
+            <param name="args">Command line arguments.</param>
+        </member>
+        <member name="M:MusicStore.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            This method creates the host builder.
+            </summary>
+            <param name="args">System arguments.</param>
+            <returns>An instance of type <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder"/>.</returns>
+        </member>
+        <member name="T:MusicStore.Startup">
+            <summary>
+            This is the start up class.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Startup"/> class.
+            </summary>
+            <param name="configuration">This a type of <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> which represents the application key-value settings.</param>
+        </member>
+        <member name="P:MusicStore.Startup.Configuration">
+            <summary>
+            Gets the application key-value settings.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">The service collection, and the dependencies required.</param>
+        </member>
+        <member name="M:MusicStore.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">The application builder middleware.</param>
+            <param name="env">The web hosting environment middleware.</param>
+        </member>
+        <member name="T:MusicStore.WeatherForecast">
+            <summary>
+            This class models a weather forecast.
+            </summary>
+        </member>
+        <member name="P:MusicStore.WeatherForecast.Date">
+            <summary>
+            Gets or sets the date.
+            </summary>
+        </member>
+        <member name="P:MusicStore.WeatherForecast.TemperatureC">
+            <summary>
+            Gets or sets the temperature in degress centigrade.
+            </summary>
+        </member>
+        <member name="P:MusicStore.WeatherForecast.TemperatureF">
+            <summary>
+            Gets the temperature in degrees fahrenheit.
+            </summary>
+        </member>
+        <member name="P:MusicStore.WeatherForecast.Summary">
+            <summary>
+            Gets or sets the summary.
+            </summary>
+        </member>
+    </members>
+</doc>
