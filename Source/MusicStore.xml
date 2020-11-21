@@ -126,6 +126,86 @@
             Gets or sets the support representative ID.
             </summary>
         </member>
+        <member name="T:MusicStore.Models.Employee">
+            <summary>
+            This class models the employee.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.EmployeeId">
+            <summary>
+            Gets or sets the employee ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Title">
+            <summary>
+            Gets or sets the job title.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.ReportsTo">
+            <summary>
+            Gets or sets the superior.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.BirthDate">
+            <summary>
+            Gets or sets the birth date.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.HireDate">
+            <summary>
+            Gets or sets the hire date.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Address">
+            <summary>
+            Gets or sets the address.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.City">
+            <summary>
+            Gets or sets the city.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.State">
+            <summary>
+            Gets or sets the state.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Country">
+            <summary>
+            Gets or sets the country.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.PostalCode">
+            <summary>
+            Gets or sets the postal code.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Phone">
+            <summary>
+            Gets or sets the phone.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Fax">
+            <summary>
+            Gets or sets the fax number.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Employee.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
         <member name="T:MusicStore.Models.Genre">
             <summary>
             This class models the genre.
@@ -189,6 +269,11 @@
         <member name="P:MusicStore.Models.Invoice.Total">
             <summary>
             Gets or sets the total.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.InvoiceItem">
+            <summary>
+            This class models an invoice line item.
             </summary>
         </member>
         <member name="T:MusicStore.Models.MediaType">
