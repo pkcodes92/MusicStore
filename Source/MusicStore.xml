@@ -21,6 +21,41 @@
             </summary>
             <returns>Some mocked up data to be returned.</returns>
         </member>
+        <member name="T:MusicStore.Models.Album">
+            <summary>
+            This class models an album.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Album.AlbumId">
+            <summary>
+            Gets or sets the album ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Album.Title">
+            <summary>
+            Gets or sets the title of the album.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Album.ArtistId">
+            <summary>
+            Gets or sets the artist ID.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Artist">
+            <summary>
+            This class models the artist.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Artist.ArtistId">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Artist.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
         <member name="T:MusicStore.Program">
             <summary>
             This is the driver class.
