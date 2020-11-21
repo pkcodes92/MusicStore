@@ -56,6 +56,51 @@
             Gets or sets the name.
             </summary>
         </member>
+        <member name="T:MusicStore.Models.Genre">
+            <summary>
+            This class models the genre.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Genre.GenreId">
+            <summary>
+            Gets or sets the genre ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Genre.Name">
+            <summary>
+            Gets or sets the genre name.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.MediaType">
+            <summary>
+            This class represents the media type.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.MediaType.MediaTypeId">
+            <summary>
+            Gets or sets the media type ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.MediaType.Name">
+            <summary>
+            Gets or sets the name of the media type.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Playlist">
+            <summary>
+            This class models a playlist.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Playlist.PlaylistId">
+            <summary>
+            Gets or sets the playlist ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Playlist.Name">
+            <summary>
+            Gets or sets the playlist name.
+            </summary>
+        </member>
         <member name="T:MusicStore.Program">
             <summary>
             This is the driver class.
