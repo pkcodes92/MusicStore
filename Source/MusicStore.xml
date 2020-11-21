@@ -371,6 +371,33 @@
             Gets or sets the price of the song.
             </summary>
         </member>
+        <member name="T:MusicStore.MusicStoreDbContext">
+            <summary>
+            This class will setup the database context and also the necessary tables.
+            </summary>
+        </member>
+        <member name="P:MusicStore.MusicStoreDbContext.Albums">
+            <summary>
+            Gets or sets the albums.
+            </summary>
+        </member>
+        <member name="P:MusicStore.MusicStoreDbContext.Employees">
+            <summary>
+            Gets or sets the employees.
+            </summary>
+        </member>
+        <member name="M:MusicStore.MusicStoreDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            This method configures the SQLite database.
+            </summary>
+            <param name="optionsBuilder">The DB Context options.</param>
+        </member>
+        <member name="M:MusicStore.MusicStoreDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            This will seed the database initially.
+            </summary>
+            <param name="modelBuilder">The model builder to see the database with data.</param>
+        </member>
         <member name="T:MusicStore.Program">
             <summary>
             This is the driver class.

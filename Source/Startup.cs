@@ -36,6 +36,7 @@ namespace MusicStore
         /// <param name="services">The service collection, and the dependencies required.</param>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<MusicStoreDbContext>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
