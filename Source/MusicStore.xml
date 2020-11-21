@@ -56,6 +56,76 @@
             Gets or sets the name.
             </summary>
         </member>
+        <member name="T:MusicStore.Models.Customer">
+            <summary>
+            This class models a customer.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.CustomerId">
+            <summary>
+            Gets or sets the customer ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.FirstName">
+            <summary>
+            Gets or sets the first name.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.LastName">
+            <summary>
+            Gets or sets the last name.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Company">
+            <summary>
+            Gets or sets the company.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Address">
+            <summary>
+            Gets or sets the address.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.City">
+            <summary>
+            Gets or sets the city.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.State">
+            <summary>
+            Gets or sets the state.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Country">
+            <summary>
+            Gets or sets the country.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.PostalCode">
+            <summary>
+            Gets or sets the postal code.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Phone">
+            <summary>
+            Gets or sets the phone number.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Fax">
+            <summary>
+            Gets or sets the fax number.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Customer.SupportRepId">
+            <summary>
+            Gets or sets the support representative ID.
+            </summary>
+        </member>
         <member name="T:MusicStore.Models.Genre">
             <summary>
             This class models the genre.
@@ -69,6 +139,56 @@
         <member name="P:MusicStore.Models.Genre.Name">
             <summary>
             Gets or sets the genre name.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Invoice">
+            <summary>
+            This class models an invoice.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.InvoiceId">
+            <summary>
+            Gets or sets the invoice ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.CustomerId">
+            <summary>
+            Gets or sets the customer ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.InvoiceDate">
+            <summary>
+            Gets or sets the invoice date.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.BillingAddress">
+            <summary>
+            Gets or sets the billing address.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.BillingCity">
+            <summary>
+            Gets or sets the billing city.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.BillingState">
+            <summary>
+            Gets or sets the billing state.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.BillingCountry">
+            <summary>
+            Gets or sets the billing country.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.BillingPostalCode">
+            <summary>
+            Gets or sets the postal code.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Invoice.Total">
+            <summary>
+            Gets or sets the total.
             </summary>
         </member>
         <member name="T:MusicStore.Models.MediaType">
@@ -99,6 +219,71 @@
         <member name="P:MusicStore.Models.Playlist.Name">
             <summary>
             Gets or sets the playlist name.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.PlaylistTrack">
+            <summary>
+            This class models a playlist track.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.PlaylistTrack.PlaylistId">
+            <summary>
+            Gets or sets the playlist ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.PlaylistTrack.TrackId">
+            <summary>
+            Gets or sets the track ID.
+            </summary>
+        </member>
+        <member name="T:MusicStore.Models.Track">
+            <summary>
+            This class models a track.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.TrackId">
+            <summary>
+            Gets or sets the track ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.AlbumId">
+            <summary>
+            Gets or sets the album ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.MediaTypeId">
+            <summary>
+            Gets or sets the media type ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.GenreId">
+            <summary>
+            Gets or sets the genre ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.Composer">
+            <summary>
+            Gets or sets the composer.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.Milliseconds">
+            <summary>
+            Gets or sets the duration of the song in milliseconds.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.Bytes">
+            <summary>
+            Gets or sets the size of the song (file size).
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.Track.UnitPrice">
+            <summary>
+            Gets or sets the price of the song.
             </summary>
         </member>
         <member name="T:MusicStore.Program">
