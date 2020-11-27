@@ -24,6 +24,51 @@ namespace MusicStore
         public DbSet<Employee> Employees { get; set; }
 
         /// <summary>
+        /// Gets or sets the genres.
+        /// </summary>
+        public DbSet<Genre> Genres { get; set; }
+
+        /// <summary>
+        /// Gets or sets the playlists.
+        /// </summary>
+        public DbSet<Playlist> Playlists { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tracks in a playlist.
+        /// </summary>
+        public DbSet<PlaylistTrack> PlaylistTracks { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tracks.
+        /// </summary>
+        public DbSet<Track> Tracks { get; set; }
+
+        /// <summary>
+        /// Gets or sets the invoices.
+        /// </summary>
+        public DbSet<Invoice> Invoices { get; set; }
+
+        /// <summary>
+        /// Gets or sets the invoice items.
+        /// </summary>
+        public DbSet<InvoiceItem> InvoiceItems { get; set; }
+
+        /// <summary>
+        /// Gets or sets the media types.
+        /// </summary>
+        public DbSet<MediaType> MediaTypes { get; set; }
+
+        /// <summary>
+        /// Gets or sets the customers.
+        /// </summary>
+        public DbSet<Customer> Customers { get; set; }
+
+        /// <summary>
+        /// Gets or sets the artists.
+        /// </summary>
+        public DbSet<Artist> Artists { get; set; }
+
+        /// <summary>
         /// This method configures the SQLite database.
         /// </summary>
         /// <param name="optionsBuilder">The DB Context options.</param>
@@ -55,6 +100,13 @@ namespace MusicStore
                     AlbumId = 2,
                     ArtistId = 1,
                     Title = "Metora",
+                });
+
+            modelBuilder.Entity<Artist>().HasData(
+                new Artist
+                {
+                    ArtistId = 1,
+                    Name = "Linkin Park",
                 });
         }
     }
