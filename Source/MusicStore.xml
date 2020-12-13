@@ -276,6 +276,31 @@
             This class models an invoice line item.
             </summary>
         </member>
+        <member name="P:MusicStore.Models.InvoiceItem.InvoiceLineId">
+            <summary>
+            Gets or sets the invoice line ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.InvoiceItem.InvoiceId">
+            <summary>
+            Gets or sets the invoice ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.InvoiceItem.TrackId">
+            <summary>
+            Gets or sets the track ID.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.InvoiceItem.UnitPrice">
+            <summary>
+            Gets or sets the unit price.
+            </summary>
+        </member>
+        <member name="P:MusicStore.Models.InvoiceItem.Quantity">
+            <summary>
+            Gets or sets the quantity.
+            </summary>
+        </member>
         <member name="T:MusicStore.Models.MediaType">
             <summary>
             This class represents the media type.
