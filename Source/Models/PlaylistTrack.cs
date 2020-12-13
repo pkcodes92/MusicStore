@@ -4,9 +4,12 @@
 
 namespace MusicStore.Models
 {
+    using Microsoft.EntityFrameworkCore;
+
     /// <summary>
     /// This class models a playlist track.
     /// </summary>
+    [Keyless]
     public class PlaylistTrack
     {
         /// <summary>
