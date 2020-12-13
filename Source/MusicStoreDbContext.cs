@@ -75,6 +75,7 @@ namespace MusicStore
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(@"Data Source=Music.db");
+            SQLitePCL.Batteries.Init();
         }
 
         /// <summary>
