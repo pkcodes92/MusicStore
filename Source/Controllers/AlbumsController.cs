@@ -11,12 +11,19 @@ namespace MusicStore.Controllers
     using Microsoft.EntityFrameworkCore;
     using MusicStore.Models;
 
+    /// <summary>
+    /// This is the controller for the albums.
+    /// </summary>
     [Route("api/Albums")]
     [ApiController]
     public class AlbumsController : ControllerBase
     {
         private readonly MusicStoreDbContext context;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AlbumsController"/> class.
+        /// </summary>
+        /// <param name="context">The database context being injected.</param>
         public AlbumsController(MusicStoreDbContext context)
         {
             this.context = context;
@@ -26,7 +33,7 @@ namespace MusicStore.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Album>>> GetAlbums()
         {
-            return await this.context.Albums.ToListAsync();
+            return await this.context.Albums.ToListAsync().ConfigureAwait(false);
         }
 
         // GET: api/Albums/5
@@ -77,7 +84,7 @@ namespace MusicStore.Controllers
         // POST: api/Albums
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Album>> PostAlbum(Album album)
+        public async Task<ActionResult<Album>> PostAlbum([FromBody] Album album)
         {
             this.context.Albums.Add(album);
             await this.context.SaveChangesAsync();
