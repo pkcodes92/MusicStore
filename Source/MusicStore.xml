@@ -4,6 +4,52 @@
         <name>MusicStore</name>
     </assembly>
     <members>
+        <member name="T:MusicStore.Controllers.AlbumsController">
+            <summary>
+            This is the controller for the albums.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Controllers.AlbumsController.#ctor(MusicStore.MusicStoreDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Controllers.AlbumsController"/> class.
+            </summary>
+            <param name="context">The database context being injected.</param>
+        </member>
+        <member name="M:MusicStore.Controllers.AlbumsController.GetAlbums">
+            <summary>
+            This method returns all of the albums in the database.
+            </summary>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> which contains the list of albums.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.AlbumsController.GetAlbum(System.Int32)">
+            <summary>
+            This method gets an album based upon the ID.
+            </summary>
+            <param name="id">The album ID to retrieve.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> that contains the album being returned.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.AlbumsController.PutAlbum(System.Int32,MusicStore.Models.Album)">
+            <summary>
+            Updates an album given an album ID, and then using the album information.
+            </summary>
+            <param name="id">The album ID to look up for updating.</param>
+            <param name="album">The album information to update.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> that contains an indication that the updating is successful.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.AlbumsController.PostAlbum(MusicStore.Models.Album)">
+            <summary>
+            This method will add a new album to the database.
+            </summary>
+            <param name="album">The album to add.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> which will contain an album that is newly added.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.AlbumsController.DeleteAlbum(System.Int32)">
+            <summary>
+            This method will delete an album from the database.
+            </summary>
+            <param name="id">The ID of the album to remove.</param>
+            <returns>A unit of execution that contains type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/> which signals when the album is successfully deleted.</returns>
+        </member>
         <member name="T:MusicStore.Controllers.ArtistsController">
             <summary>
             This is the controller for the artists.
@@ -19,7 +65,7 @@
             <summary>
             GET: api/Artists which will gets all of the artists.
             </summary>
-            <returns>A unit of execution that contains the list of the artists.</returns>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> that contains the list of all the artists.</returns>
         </member>
         <member name="M:MusicStore.Controllers.ArtistsController.GetArtist(System.Int32)">
             <summary>
@@ -49,23 +95,6 @@
             </summary>
             <param name="id">The ID of the artist to delete.</param>
             <returns>A unit of execution that will contain a result of the operation.</returns>
-        </member>
-        <member name="T:MusicStore.Controllers.WeatherForecastController">
-            <summary>
-            This controller is for anything and everything dealing with the weather.
-            </summary>
-        </member>
-        <member name="M:MusicStore.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{MusicStore.Controllers.WeatherForecastController})">
-            <summary>
-            Initializes a new instance of the <see cref="T:MusicStore.Controllers.WeatherForecastController"/> class.
-            </summary>
-            <param name="logger">The default logging mechanism.</param>
-        </member>
-        <member name="M:MusicStore.Controllers.WeatherForecastController.Get">
-            <summary>
-            This method gets data.
-            </summary>
-            <returns>Some mocked up data to be returned.</returns>
         </member>
         <member name="T:MusicStore.Migrations.FirstOne">
             <summary>
@@ -580,31 +609,6 @@
             </summary>
             <param name="app">The application builder middleware.</param>
             <param name="env">The web hosting environment middleware.</param>
-        </member>
-        <member name="T:MusicStore.WeatherForecast">
-            <summary>
-            This class models a weather forecast.
-            </summary>
-        </member>
-        <member name="P:MusicStore.WeatherForecast.Date">
-            <summary>
-            Gets or sets the date.
-            </summary>
-        </member>
-        <member name="P:MusicStore.WeatherForecast.TemperatureC">
-            <summary>
-            Gets or sets the temperature in degress centigrade.
-            </summary>
-        </member>
-        <member name="P:MusicStore.WeatherForecast.TemperatureF">
-            <summary>
-            Gets the temperature in degrees fahrenheit.
-            </summary>
-        </member>
-        <member name="P:MusicStore.WeatherForecast.Summary">
-            <summary>
-            Gets or sets the summary.
-            </summary>
         </member>
     </members>
 </doc>

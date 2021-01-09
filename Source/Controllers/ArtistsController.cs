@@ -33,7 +33,7 @@ namespace MusicStore.Controllers
         /// <summary>
         /// GET: api/Artists which will gets all of the artists.
         /// </summary>
-        /// <returns>A unit of execution that contains the list of the artists.</returns>
+        /// <returns>A unit of execution that contains the type of <see cref="ActionResult"/> that contains the list of all the artists.</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Artist>>> GetArtists()
         {

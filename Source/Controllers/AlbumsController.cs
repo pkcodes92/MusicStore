@@ -4,6 +4,7 @@
 
 namespace MusicStore.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -29,18 +30,25 @@ namespace MusicStore.Controllers
             this.context = context;
         }
 
-        // GET: api/Albums
+        /// <summary>
+        /// This method returns all of the albums in the database.
+        /// </summary>
+        /// <returns>A unit of execution that contains a type of <see cref="ActionResult"/> which contains the list of albums.</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Album>>> GetAlbums()
         {
             return await this.context.Albums.ToListAsync().ConfigureAwait(false);
         }
 
-        // GET: api/Albums/5
+        /// <summary>
+        /// This method gets an album based upon the ID.
+        /// </summary>
+        /// <param name="id">The album ID to retrieve.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="ActionResult"/> that contains the album being returned.</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Album>> GetAlbum(int id)
         {
-            var album = await this.context.Albums.FindAsync(id);
+            var album = await this.context.Albums.FindAsync(id).ConfigureAwait(false);
 
             if (album == null)
             {
@@ -50,11 +58,20 @@ namespace MusicStore.Controllers
             return album;
         }
 
-        // PUT: api/Albums/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// Updates an album given an album ID, and then using the album information.
+        /// </summary>
+        /// <param name="id">The album ID to look up for updating.</param>
+        /// <param name="album">The album information to update.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="IActionResult"/> that contains an indication that the updating is successful.</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAlbum(int id, Album album)
         {
+            if (album is null)
+            {
+                throw new ArgumentNullException(nameof(album));
+            }
+
             if (id != album.AlbumId)
             {
                 return this.BadRequest();
@@ -64,7 +81,7 @@ namespace MusicStore.Controllers
 
             try
             {
-                await this.context.SaveChangesAsync();
+                await this.context.SaveChangesAsync().ConfigureAwait(false);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -81,29 +98,41 @@ namespace MusicStore.Controllers
             return this.NoContent();
         }
 
-        // POST: api/Albums
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        /// <summary>
+        /// This method will add a new album to the database.
+        /// </summary>
+        /// <param name="album">The album to add.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="ActionResult"/> which will contain an album that is newly added.</returns>
         [HttpPost]
         public async Task<ActionResult<Album>> PostAlbum([FromBody] Album album)
         {
+            if (album is null)
+            {
+                throw new ArgumentNullException(nameof(album));
+            }
+
             this.context.Albums.Add(album);
-            await this.context.SaveChangesAsync();
+            await this.context.SaveChangesAsync().ConfigureAwait(false);
 
             return this.CreatedAtAction("GetAlbum", new { id = album.AlbumId }, album);
         }
 
-        // DELETE: api/Albums/5
+        /// <summary>
+        /// This method will delete an album from the database.
+        /// </summary>
+        /// <param name="id">The ID of the album to remove.</param>
+        /// <returns>A unit of execution that contains type of <see cref="IActionResult"/> which signals when the album is successfully deleted.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAlbum(int id)
         {
-            var album = await this.context.Albums.FindAsync(id);
+            var album = await this.context.Albums.FindAsync(id).ConfigureAwait(false);
             if (album == null)
             {
                 return this.NotFound();
             }
 
             this.context.Albums.Remove(album);
-            await this.context.SaveChangesAsync();
+            await this.context.SaveChangesAsync().ConfigureAwait(false);
 
             return this.NoContent();
         }
