@@ -4,6 +4,52 @@
         <name>MusicStore</name>
     </assembly>
     <members>
+        <member name="T:MusicStore.Controllers.ArtistsController">
+            <summary>
+            This is the controller for the artists.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Controllers.ArtistsController.#ctor(MusicStore.MusicStoreDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Controllers.ArtistsController"/> class.
+            </summary>
+            <param name="context">SQLite Database context.</param>
+        </member>
+        <member name="M:MusicStore.Controllers.ArtistsController.GetArtists">
+            <summary>
+            GET: api/Artists which will gets all of the artists.
+            </summary>
+            <returns>A unit of execution that contains the list of the artists.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.ArtistsController.GetArtist(System.Int32)">
+            <summary>
+            This method returns an artist by the ID.
+            </summary>
+            <param name="id">The ID of the artist, and integer.</param>
+            <returns>A task that returns the artist.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.ArtistsController.PutArtist(System.Int32,MusicStore.Models.Artist)">
+            <summary>
+            This method will update an artist by the ID.
+            </summary>
+            <param name="id">The ID of the artist to update.</param>
+            <param name="artist">The artist information to update.</param>
+            <returns>A unit of execution that contains the final result of the operation.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.ArtistsController.PostArtist(MusicStore.Models.Artist)">
+            <summary>
+            This method will insert a new artist into the database.
+            </summary>
+            <param name="artist">The artist information to add.</param>
+            <returns>A unit of execution that contains the artist.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.ArtistsController.DeleteArtist(System.Int32)">
+            <summary>
+            This method will delete an artist by ID.
+            </summary>
+            <param name="id">The ID of the artist to delete.</param>
+            <returns>A unit of execution that will contain a result of the operation.</returns>
+        </member>
         <member name="T:MusicStore.Controllers.WeatherForecastController">
             <summary>
             This controller is for anything and everything dealing with the weather.
@@ -20,6 +66,26 @@
             This method gets data.
             </summary>
             <returns>Some mocked up data to be returned.</returns>
+        </member>
+        <member name="T:MusicStore.Migrations.FirstOne">
+            <summary>
+            This is the first migration.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Migrations.FirstOne.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            This method would be having the tables created.
+            </summary>
+            <param name="migrationBuilder">The migration building middleware.</param>
+        </member>
+        <member name="M:MusicStore.Migrations.FirstOne.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            This method would tear down the database when required.
+            </summary>
+            <param name="migrationBuilder">The migration building middleware.</param>
+        </member>
+        <member name="M:MusicStore.Migrations.FirstOne.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc/>
         </member>
         <member name="T:MusicStore.Models.Album">
             <summary>

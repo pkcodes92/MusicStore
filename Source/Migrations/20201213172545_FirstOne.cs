@@ -1,12 +1,28 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿// <copyright file="20201213172545_FirstOne.cs" company="PK Codes">
+// Copyright (c) PK Codes. All rights reserved.
+// </copyright>
 
 namespace MusicStore.Migrations
 {
+    using System;
+    using Microsoft.EntityFrameworkCore.Migrations;
+
+    /// <summary>
+    /// This is the first migration.
+    /// </summary>
     public partial class FirstOne : Migration
     {
+        /// <summary>
+        /// This method would be having the tables created.
+        /// </summary>
+        /// <param name="migrationBuilder">The migration building middleware.</param>
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            if (migrationBuilder is null)
+            {
+                throw new ArgumentNullException(nameof(migrationBuilder));
+            }
+
             migrationBuilder.CreateTable(
                 name: "Albums",
                 columns: table => new
@@ -14,7 +30,7 @@ namespace MusicStore.Migrations
                     AlbumId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(type: "TEXT", nullable: true),
-                    ArtistId = table.Column<int>(type: "INTEGER", nullable: false)
+                    ArtistId = table.Column<int>(type: "INTEGER", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -27,7 +43,7 @@ namespace MusicStore.Migrations
                 {
                     ArtistId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: true)
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
                 },
                 constraints: table =>
                 {
@@ -51,7 +67,7 @@ namespace MusicStore.Migrations
                     Phone = table.Column<string>(type: "TEXT", nullable: true),
                     Fax = table.Column<string>(type: "TEXT", nullable: true),
                     Email = table.Column<string>(type: "TEXT", nullable: true),
-                    SupportRepId = table.Column<int>(type: "INTEGER", nullable: true)
+                    SupportRepId = table.Column<int>(type: "INTEGER", nullable: true),
                 },
                 constraints: table =>
                 {
@@ -77,7 +93,7 @@ namespace MusicStore.Migrations
                     PostalCode = table.Column<string>(type: "TEXT", nullable: true),
                     Phone = table.Column<string>(type: "TEXT", nullable: true),
                     Fax = table.Column<string>(type: "TEXT", nullable: true),
-                    Email = table.Column<string>(type: "TEXT", nullable: true)
+                    Email = table.Column<string>(type: "TEXT", nullable: true),
                 },
                 constraints: table =>
                 {
@@ -90,7 +106,7 @@ namespace MusicStore.Migrations
                 {
                     GenreId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: true)
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
                 },
                 constraints: table =>
                 {
@@ -105,7 +121,7 @@ namespace MusicStore.Migrations
                     InvoiceId = table.Column<int>(type: "INTEGER", nullable: false),
                     TrackId = table.Column<int>(type: "INTEGER", nullable: false),
                     UnitPrice = table.Column<string>(type: "TEXT", nullable: true),
-                    Quantity = table.Column<int>(type: "INTEGER", nullable: false)
+                    Quantity = table.Column<int>(type: "INTEGER", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -124,7 +140,7 @@ namespace MusicStore.Migrations
                     BillingState = table.Column<string>(type: "TEXT", nullable: true),
                     BillingCountry = table.Column<string>(type: "TEXT", nullable: true),
                     BillingPostalCode = table.Column<string>(type: "TEXT", nullable: true),
-                    Total = table.Column<string>(type: "TEXT", nullable: true)
+                    Total = table.Column<string>(type: "TEXT", nullable: true),
                 },
                 constraints: table =>
                 {
@@ -137,7 +153,7 @@ namespace MusicStore.Migrations
                 {
                     MediaTypeId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: true)
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
                 },
                 constraints: table =>
                 {
@@ -150,7 +166,7 @@ namespace MusicStore.Migrations
                 {
                     PlaylistId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: true)
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
                 },
                 constraints: table =>
                 {
@@ -162,7 +178,7 @@ namespace MusicStore.Migrations
                 columns: table => new
                 {
                     PlaylistId = table.Column<int>(type: "INTEGER", nullable: false),
-                    TrackId = table.Column<int>(type: "INTEGER", nullable: false)
+                    TrackId = table.Column<int>(type: "INTEGER", nullable: false),
                 },
                 constraints: table =>
                 {
@@ -181,7 +197,7 @@ namespace MusicStore.Migrations
                     Composer = table.Column<string>(type: "TEXT", nullable: true),
                     Milliseconds = table.Column<int>(type: "INTEGER", nullable: false),
                     Bytes = table.Column<int>(type: "INTEGER", nullable: false),
-                    UnitPrice = table.Column<string>(type: "TEXT", nullable: true)
+                    UnitPrice = table.Column<string>(type: "TEXT", nullable: true),
                 },
                 constraints: table =>
                 {
@@ -204,8 +220,17 @@ namespace MusicStore.Migrations
                 values: new object[] { 1, "Linkin Park" });
         }
 
+        /// <summary>
+        /// This method would tear down the database when required.
+        /// </summary>
+        /// <param name="migrationBuilder">The migration building middleware.</param>
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            if (migrationBuilder is null)
+            {
+                throw new ArgumentNullException(nameof(migrationBuilder));
+            }
+
             migrationBuilder.DropTable(
                 name: "Albums");
 
