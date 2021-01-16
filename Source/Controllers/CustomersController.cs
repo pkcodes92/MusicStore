@@ -4,7 +4,9 @@
 
 namespace MusicStore.Controllers
 {
+    using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
@@ -54,6 +56,51 @@ namespace MusicStore.Controllers
             }
 
             return artist;
+        }
+
+        /// <summary>
+        /// This method will update a customer by the ID.
+        /// </summary>
+        /// <param name="id">The customer ID.</param>
+        /// <param name="customer">The customer information to update.</param>
+        /// <returns>A unit of execution that contains the type of <see cref="IActionResult"/>.</returns>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCustomer(int id, Customer customer)
+        {
+            if (customer is null)
+            {
+                throw new ArgumentNullException(nameof(customer));
+            }
+
+            if (id != customer.CustomerId)
+            {
+                return this.BadRequest();
+            }
+
+            this.context.Entry(customer).State = EntityState.Modified;
+
+            try
+            {
+                await this.context.SaveChangesAsync().ConfigureAwait(false);
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!this.CustomerExists(id))
+                {
+                    return this.NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return this.NoContent();
+        }
+
+        private bool CustomerExists(int id)
+        {
+            return this.context.Customers.Any(e => e.CustomerId == id);
         }
     }
 }

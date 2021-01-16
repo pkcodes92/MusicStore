@@ -120,6 +120,14 @@
             <param name="id">The ID of the customer.</param>
             <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
         </member>
+        <member name="M:MusicStore.Controllers.CustomersController.PutCustomer(System.Int32,MusicStore.Models.Customer)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="customer"></param>
+            <returns></returns>
+        </member>
         <member name="T:MusicStore.Controllers.GenresController">
             <summary>
             This is the controller for all the genres.
@@ -193,6 +201,13 @@
             This method gets all the tracks from the database.
             </summary>
             <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.TracksController.GetTrack(System.Int32)">
+            <summary>
+            This method will return a track based on the ID.
+            </summary>
+            <param name="id">The ID of the track.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
         </member>
         <member name="T:MusicStore.Migrations.FirstOne">
             <summary>
