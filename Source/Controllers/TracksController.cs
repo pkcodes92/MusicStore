@@ -38,5 +38,23 @@ namespace MusicStore.Controllers
         {
             return await this.context.Tracks.ToListAsync().ConfigureAwait(false);
         }
+
+        /// <summary>
+        /// This method will return a track based on the ID.
+        /// </summary>
+        /// <param name="id">The ID of the track.</param>
+        /// <returns>A <see cref="Task{ActionResult}"/> representing the result of the asynchronous operation.</returns>
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Track>> GetTrack(int id)
+        {
+            var track = await this.context.Tracks.FindAsync(id).ConfigureAwait(false);
+
+            if (track == null)
+            {
+                return this.NotFound();
+            }
+
+            return track;
+        }
     }
 }

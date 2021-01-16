@@ -43,7 +43,7 @@ namespace MusicStore.Controllers
         /// <summary>
         /// This method returns an artist by the ID.
         /// </summary>
-        /// <param name="id">The ID of the artist, and integer.</param>
+        /// <param name="id">The ID of the artist.</param>
         /// <returns>A task that returns the artist.</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Artist>> GetArtist(int id)

@@ -71,7 +71,7 @@
             <summary>
             This method returns an artist by the ID.
             </summary>
-            <param name="id">The ID of the artist, and integer.</param>
+            <param name="id">The ID of the artist.</param>
             <returns>A task that returns the artist.</returns>
         </member>
         <member name="M:MusicStore.Controllers.ArtistsController.PutArtist(System.Int32,MusicStore.Models.Artist)">
@@ -112,6 +112,13 @@
             This method gets all the customers from the database.
             </summary>
             <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.CustomersController.GetCustomer(System.Int32)">
+            <summary>
+            This method will get a customer by their ID.
+            </summary>
+            <param name="id">The ID of the customer.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
         </member>
         <member name="T:MusicStore.Controllers.GenresController">
             <summary>
@@ -158,6 +165,17 @@
             </summary>
             <param name="id">The ID of the genre to delete.</param>
             <returns>A unit of execution that contains <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
+        <member name="T:MusicStore.Controllers.PlaylistsController">
+            <summary>
+            This is the controller for the playlists.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Controllers.PlaylistsController.#ctor(MusicStore.MusicStoreDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Controllers.PlaylistsController"/> class.
+            </summary>
+            <param name="context">This is the database context.</param>
         </member>
         <member name="T:MusicStore.Controllers.TracksController">
             <summary>

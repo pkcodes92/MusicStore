@@ -37,5 +37,23 @@ namespace MusicStore.Controllers
         {
             return await this.context.Customers.ToListAsync().ConfigureAwait(false);
         }
+
+        /// <summary>
+        /// This method will get a customer by their ID.
+        /// </summary>
+        /// <param name="id">The ID of the customer.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="ActionResult"/>.</returns>
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Customer>> GetCustomer(int id)
+        {
+            var artist = await this.context.Customers.FindAsync(id).ConfigureAwait(false);
+
+            if (artist == null)
+            {
+                return this.NotFound();
+            }
+
+            return artist;
+        }
     }
 }
