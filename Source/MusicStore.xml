@@ -96,6 +96,23 @@
             <param name="id">The ID of the artist to delete.</param>
             <returns>A unit of execution that will contain a result of the operation.</returns>
         </member>
+        <member name="T:MusicStore.Controllers.CustomersController">
+            <summary>
+            This is the customers controller.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Controllers.CustomersController.#ctor(MusicStore.MusicStoreDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Controllers.CustomersController"/> class.
+            </summary>
+            <param name="context">The music database context being injected.</param>
+        </member>
+        <member name="M:MusicStore.Controllers.CustomersController.GetCustomers">
+            <summary>
+            This method gets all the customers from the database.
+            </summary>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
         <member name="T:MusicStore.Controllers.GenresController">
             <summary>
             This is the controller for all the genres.
@@ -141,6 +158,23 @@
             </summary>
             <param name="id">The ID of the genre to delete.</param>
             <returns>A unit of execution that contains <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
+        <member name="T:MusicStore.Controllers.TracksController">
+            <summary>
+            This class is for performing crud operations on music tracks.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Controllers.TracksController.#ctor(MusicStore.MusicStoreDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Controllers.TracksController"/> class.
+            </summary>
+            <param name="context">The music database context.</param>
+        </member>
+        <member name="M:MusicStore.Controllers.TracksController.GetTracks">
+            <summary>
+            This method gets all the tracks from the database.
+            </summary>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
         </member>
         <member name="T:MusicStore.Migrations.FirstOne">
             <summary>

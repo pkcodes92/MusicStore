@@ -5,7 +5,10 @@
 namespace MusicStore.Controllers
 {
     using System.Collections.Generic;
+    using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
+    using MusicStore.Models;
 
     /// <summary>
     /// This is the customers controller.
@@ -14,36 +17,25 @@ namespace MusicStore.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        // GET: api/<CustomersController>
+        private readonly MusicStoreDbContext context;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CustomersController"/> class.
+        /// </summary>
+        /// <param name="context">The music database context being injected.</param>
+        public CustomersController(MusicStoreDbContext context)
+        {
+            this.context = context;
+        }
+
+        /// <summary>
+        /// This method gets all the customers from the database.
+        /// </summary>
+        /// <returns>A unit of execution that contains the type of <see cref="ActionResult"/>.</returns>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
         {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/<CustomersController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<CustomersController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<CustomersController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<CustomersController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return await this.context.Customers.ToListAsync().ConfigureAwait(false);
         }
     }
 }
