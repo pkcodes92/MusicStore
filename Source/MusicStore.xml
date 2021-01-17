@@ -122,11 +122,11 @@
         </member>
         <member name="M:MusicStore.Controllers.CustomersController.PutCustomer(System.Int32,MusicStore.Models.Customer)">
             <summary>
-            
+            This method will update a customer by the ID.
             </summary>
-            <param name="id"></param>
-            <param name="customer"></param>
-            <returns></returns>
+            <param name="id">The customer ID.</param>
+            <param name="customer">The customer information to update.</param>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
         </member>
         <member name="T:MusicStore.Controllers.GenresController">
             <summary>
@@ -208,6 +208,14 @@
             </summary>
             <param name="id">The ID of the track.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.TracksController.PutTrack(System.Int32,MusicStore.Models.Track)">
+            <summary>
+            This method will update the track information.
+            </summary>
+            <param name="id">The track ID.</param>
+            <param name="track">The track information to update.</param>
+            <returns>A unit of execution that will contain a type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
         </member>
         <member name="T:MusicStore.Migrations.FirstOne">
             <summary>
