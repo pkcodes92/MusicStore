@@ -212,6 +212,13 @@
             <param name="id">The ID of the playlist to get.</param>
             <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
         </member>
+        <member name="M:MusicStore.Controllers.PlaylistsController.PostPlaylist(MusicStore.Models.Playlist)">
+            <summary>
+            This method will add a new playlist to the database.
+            </summary>
+            <param name="playlist">The playlist to add.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
         <member name="M:MusicStore.Controllers.PlaylistsController.PutPlaylist(System.Int32,MusicStore.Models.Playlist)">
             <summary>
             This method will update the playlist information.
@@ -219,6 +226,13 @@
             <param name="id">The playlist ID.</param>
             <param name="playlist">The playlist information to update.</param>
             <returns>A unit of execution that will contain a type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.PlaylistsController.DeletePlaylist(System.Int32)">
+            <summary>
+            This method would delete a playlist from the database.
+            </summary>
+            <param name="id">The id of the playlist to delete.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
         </member>
         <member name="T:MusicStore.Controllers.TracksController">
             <summary>

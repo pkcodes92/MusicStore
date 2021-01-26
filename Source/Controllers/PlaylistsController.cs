@@ -117,6 +117,26 @@ namespace MusicStore.Controllers
             return this.NoContent();
         }
 
+        /// <summary>
+        /// This method would delete a playlist from the database.
+        /// </summary>
+        /// <param name="id">The id of the playlist to delete.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="IActionResult"/>.</returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePlaylist(int id)
+        {
+            var playlist = await this.context.Playlists.FindAsync(id).ConfigureAwait(false);
+            if (playlist == null)
+            {
+                return this.NotFound();
+            }
+
+            this.context.Playlists.Remove(playlist);
+            await this.context.SaveChangesAsync().ConfigureAwait(false);
+
+            return this.NoContent();
+        }
+
         private bool PlaylistExists(int id)
         {
             return this.context.Playlists.Any(e => e.PlaylistId == id);
