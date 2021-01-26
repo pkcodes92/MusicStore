@@ -128,6 +128,20 @@
             <param name="customer">The customer information to update.</param>
             <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
         </member>
+        <member name="M:MusicStore.Controllers.CustomersController.PostCustomer(MusicStore.Models.Customer)">
+            <summary>
+            This method will add a new customer to the database.
+            </summary>
+            <param name="customer">The customer to add.</param>
+            <returns>A unit of execution that contains the new customer added.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.CustomersController.DeleteCustomer(System.Int32)">
+            <summary>
+            This method will delete a customer from the database.
+            </summary>
+            <param name="id">The ID of the customer.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
         <member name="T:MusicStore.Controllers.GenresController">
             <summary>
             This is the controller for all the genres.
@@ -185,6 +199,27 @@
             </summary>
             <param name="context">This is the database context.</param>
         </member>
+        <member name="M:MusicStore.Controllers.PlaylistsController.GetPlaylists">
+            <summary>
+            This method gets all the playlists from the database.
+            </summary>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.PlaylistsController.GetPlaylist(System.Int32)">
+            <summary>
+            This method gets the playlist based on the ID.
+            </summary>
+            <param name="id">The ID of the playlist to get.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.PlaylistsController.PutPlaylist(System.Int32,MusicStore.Models.Playlist)">
+            <summary>
+            This method will update the playlist information.
+            </summary>
+            <param name="id">The playlist ID.</param>
+            <param name="playlist">The playlist information to update.</param>
+            <returns>A unit of execution that will contain a type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
         <member name="T:MusicStore.Controllers.TracksController">
             <summary>
             This class is for performing crud operations on music tracks.
@@ -216,6 +251,20 @@
             <param name="id">The track ID.</param>
             <param name="track">The track information to update.</param>
             <returns>A unit of execution that will contain a type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.TracksController.PostTrack(MusicStore.Models.Track)">
+            <summary>
+            This method will add a new track to the database.
+            </summary>
+            <param name="track">The track to add.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.TracksController.DeleteTrack(System.Int32)">
+            <summary>
+            This method removes a track from the database.
+            </summary>
+            <param name="id">The ID of the track to remove.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
         </member>
         <member name="T:MusicStore.Migrations.FirstOne">
             <summary>

@@ -99,6 +99,46 @@ namespace MusicStore.Controllers
             return this.NoContent();
         }
 
+        /// <summary>
+        /// This method will add a new track to the database.
+        /// </summary>
+        /// <param name="track">The track to add.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="ActionResult"/>.</returns>
+        [HttpPost]
+        public async Task<ActionResult<Track>> PostTrack(Track track)
+        {
+            if (track is null)
+            {
+                throw new ArgumentNullException(nameof(track));
+            }
+
+            this.context.Tracks.Add(track);
+            await this.context.SaveChangesAsync().ConfigureAwait(false);
+
+            return this.CreatedAtAction("GetTrack", new { id = track.TrackId }, track);
+        }
+
+        /// <summary>
+        /// This method removes a track from the database.
+        /// </summary>
+        /// <param name="id">The ID of the track to remove.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="IActionResult"/>.</returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTrack(int id)
+        {
+            var track = await this.context.Tracks.FindAsync(id).ConfigureAwait(false);
+
+            if (track == null)
+            {
+                return this.NotFound();
+            }
+
+            this.context.Tracks.Remove(track);
+            await this.context.SaveChangesAsync().ConfigureAwait(false);
+
+            return this.NoContent();
+        }
+
         private bool TrackExists(int id)
         {
             return this.context.Tracks.Any(e => e.TrackId == id);

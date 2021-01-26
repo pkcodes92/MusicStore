@@ -353,4 +353,4 @@ MigrationBackup/
 .ionide/
 
 # Ignoring the database file here
-*MusicStore/Source/Music.db
+MusicStore/Source/Music.db

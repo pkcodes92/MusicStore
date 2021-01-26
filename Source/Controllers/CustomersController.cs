@@ -98,6 +98,46 @@ namespace MusicStore.Controllers
             return this.NoContent();
         }
 
+        /// <summary>
+        /// This method will add a new customer to the database.
+        /// </summary>
+        /// <param name="customer">The customer to add.</param>
+        /// <returns>A unit of execution that contains the new customer added.</returns>
+        [HttpPost]
+        public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
+        {
+            if (customer is null)
+            {
+                throw new ArgumentNullException(nameof(customer));
+            }
+
+            this.context.Customers.Add(customer);
+            await this.context.SaveChangesAsync().ConfigureAwait(false);
+
+            return this.CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);
+        }
+
+        /// <summary>
+        /// This method will delete a customer from the database.
+        /// </summary>
+        /// <param name="id">The ID of the customer.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="IActionResult"/>.</returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCustomer(int id)
+        {
+            var customer = await this.context.Customers.FindAsync(id).ConfigureAwait(false);
+
+            if (customer == null)
+            {
+                return this.NotFound();
+            }
+
+            this.context.Customers.Remove(customer);
+            await this.context.SaveChangesAsync().ConfigureAwait(false);
+
+            return this.NoContent();
+        }
+
         private bool CustomerExists(int id)
         {
             return this.context.Customers.Any(e => e.CustomerId == id);
