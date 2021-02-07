@@ -234,6 +234,37 @@
             <param name="id">The ID of the genre to delete.</param>
             <returns>A unit of execution that contains <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
         </member>
+        <member name="T:MusicStore.Controllers.InvoicesController">
+            <summary>
+            This is the controller for the invoices.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Controllers.InvoicesController.#ctor(MusicStore.MusicStoreDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Controllers.InvoicesController"/> class.
+            </summary>
+            <param name="context">The database context being injected.</param>
+        </member>
+        <member name="M:MusicStore.Controllers.InvoicesController.GetInvoices">
+            <summary>
+            This method will get the invoices from the database.
+            </summary>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.InvoicesController.GetInvoice(System.Int32)">
+            <summary>
+            This method will retrieve an invoice by the ID.
+            </summary>
+            <param name="id">The invoice ID.</param>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.InvoicesController.PostInvoice(MusicStore.Models.Invoice)">
+            <summary>
+            This method will add an invoice to the database.
+            </summary>
+            <param name="invoice">The invoice to add into the database.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult`1"/>.</returns>
+        </member>
         <member name="T:MusicStore.Controllers.PlaylistsController">
             <summary>
             This is the controller for the playlists.
