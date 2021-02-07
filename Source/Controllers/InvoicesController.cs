@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿// <copyright file="InvoicesController.cs" company="PK Codes">
+// Copyright (c) PK Codes. All rights reserved.
+// </copyright>
 
 namespace MusicStore.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
     [ApiController]
     public class InvoicesController : ControllerBase

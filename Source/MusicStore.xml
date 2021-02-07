@@ -142,6 +142,52 @@
             <param name="id">The ID of the customer.</param>
             <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
         </member>
+        <member name="T:MusicStore.Controllers.EmployeesController">
+            <summary>
+            This is the controller for employees.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Controllers.EmployeesController.#ctor(MusicStore.MusicStoreDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Controllers.EmployeesController"/> class.
+            </summary>
+            <param name="context">The database context being injected.</param>
+        </member>
+        <member name="M:MusicStore.Controllers.EmployeesController.GetEmployees">
+            <summary>
+            This method returns all of the employees that are listed in the database.
+            </summary>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.EmployeesController.GetEmployee(System.Int32)">
+            <summary>
+            This method will retrieve an employee by the ID.
+            </summary>
+            <param name="id">The employee ID.</param>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.EmployeesController.PostEmployee(MusicStore.Models.Employee)">
+            <summary>
+            This method will add a new employee to the database.
+            </summary>
+            <param name="employee">The employee to add.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult`1"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.EmployeesController.PutEmployee(System.Int32,MusicStore.Models.Employee)">
+            <summary>
+            This method will update an employee based on the ID and information.
+            </summary>
+            <param name="id">The employee ID.</param>
+            <param name="employee">The employee information to update.</param>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.EmployeesController.DeleteEmployee(System.Int32)">
+            <summary>
+            This method will delete an employee from the database based on an ID.
+            </summary>
+            <param name="id">The ID of the employee to delete.</param>
+            <returns>A unit of execution that contains <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
         <member name="T:MusicStore.Controllers.GenresController">
             <summary>
             This is the controller for all the genres.
