@@ -37,5 +37,23 @@ namespace MusicStore.Controllers
         {
             return await this.context.PlaylistTracks.ToListAsync().ConfigureAwait(false);
         }
+
+        /// <summary>
+        /// This method will get a playlist track that is stored in the database.
+        /// </summary>
+        /// <param name="id">The playlist track ID.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="ActionResult"/>.</returns>
+        [HttpGet("{id}")]
+        public async Task<ActionResult<PlaylistTrack>> GetPlaylistTrack(int id)
+        {
+            var playlistTrack = await this.context.PlaylistTracks.FindAsync(id).ConfigureAwait(false);
+
+            if (playlistTrack == null)
+            {
+                return this.NotFound();
+            }
+
+            return playlistTrack;
+        }
     }
 }

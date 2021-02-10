@@ -265,6 +265,38 @@
             <param name="invoice">The invoice to add into the database.</param>
             <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult`1"/>.</returns>
         </member>
+        <member name="M:MusicStore.Controllers.InvoicesController.PutInvoice(System.Int32,MusicStore.Models.Invoice)">
+            <summary>
+            This method will update an invoice based on the ID and information.
+            </summary>
+            <param name="id">The invoice ID.</param>
+            <param name="invoice">The employee information to update.</param>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.InvoicesController.DeleteInvoice(System.Int32)">
+            <summary>
+            This method will delete an employee from the database based on an ID.
+            </summary>
+            <param name="id">The ID of the employee to delete.</param>
+            <returns>A unit of execution that contains <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
+        <member name="T:MusicStore.Controllers.MediaTypesController">
+            <summary>
+            This is the media types controller.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Controllers.MediaTypesController.#ctor(MusicStore.MusicStoreDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Controllers.MediaTypesController"/> class.
+            </summary>
+            <param name="context">This is the database context being injected.</param>
+        </member>
+        <member name="M:MusicStore.Controllers.MediaTypesController.GetMediaTypes">
+            <summary>
+            This method returns all of the media types that are stored in the database.
+            </summary>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
         <member name="T:MusicStore.Controllers.PlaylistsController">
             <summary>
             This is the controller for the playlists.
@@ -310,6 +342,30 @@
             </summary>
             <param name="id">The id of the playlist to delete.</param>
             <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
+        <member name="T:MusicStore.Controllers.PlaylistTracksController">
+            <summary>
+            This is the playlist tracks controller.
+            </summary>
+        </member>
+        <member name="M:MusicStore.Controllers.PlaylistTracksController.#ctor(MusicStore.MusicStoreDbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MusicStore.Controllers.PlaylistTracksController"/> class.
+            </summary>
+            <param name="context">The database context being injected.</param>
+        </member>
+        <member name="M:MusicStore.Controllers.PlaylistTracksController.GetPlaylistTracks">
+            <summary>
+            This method will return all of the playlist tracks in the database.
+            </summary>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.PlaylistTracksController.GetPlaylistTrack(System.Int32)">
+            <summary>
+            This method will get a playlist track that is stored in the database.
+            </summary>
+            <param name="id">The playlist track ID.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
         </member>
         <member name="T:MusicStore.Controllers.TracksController">
             <summary>
