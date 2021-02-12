@@ -4,6 +4,7 @@
 
 namespace MusicStore.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
@@ -54,6 +55,40 @@ namespace MusicStore.Controllers
             }
 
             return playlistTrack;
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutPlaylistTrack(int id, PlaylistTrack playlistTrack)
+        {
+            if (playlistTrack is null)
+            {
+                throw new ArgumentNullException(nameof(playlistTrack));
+            }
+
+            if (id != playlistTrack.PlaylistId)
+            {
+                return this.BadRequest();
+            }
+
+            this.context.Entry(playlistTrack).State = EntityState.Modified;
+
+            try
+            {
+                await this.context.SaveChangesAsync().ConfigureAwait(false);
+            }
+            catch (Exception)
+            {
+                if (!this.PlaylistTrackExists(id))
+                {
+                    return this.NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return this.NoContent();
         }
     }
 }
