@@ -6,6 +6,7 @@ namespace MusicStore.Controllers
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
@@ -57,6 +58,12 @@ namespace MusicStore.Controllers
             return playlistTrack;
         }
 
+        /// <summary>
+        /// This method will update a playlist track.
+        /// </summary>
+        /// <param name="id">The playlist id.</param>
+        /// <param name="playlistTrack">The playlist track information.</param>
+        /// <returns>A unit of execution that contains the type of <see cref="IActionResult"/>.</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPlaylistTrack(int id, PlaylistTrack playlistTrack)
         {
@@ -89,6 +96,30 @@ namespace MusicStore.Controllers
             }
 
             return this.NoContent();
+        }
+
+        /// <summary>
+        /// This method adds a new playlist track to the database.
+        /// </summary>
+        /// <param name="playlistTrack">The playlist track to add.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="ActionResult"/> which contains the type of <see cref="PlaylistTrack"/>.</returns>
+        [HttpPost]
+        public async Task<ActionResult<PlaylistTrack>> PostPlaylistTrack(PlaylistTrack playlistTrack)
+        {
+            if (playlistTrack is null)
+            {
+                throw new ArgumentNullException(nameof(playlistTrack));
+            }
+
+            this.context.PlaylistTracks.Add(playlistTrack);
+            await this.context.SaveChangesAsync().ConfigureAwait(false);
+
+            return this.CreatedAtAction("GetPlaylistTrack", new { id = playlistTrack.PlaylistId }, playlistTrack);
+        }
+
+        private bool PlaylistTrackExists(int id)
+        {
+            return this.context.PlaylistTracks.Any(e => e.PlaylistId == id);
         }
     }
 }

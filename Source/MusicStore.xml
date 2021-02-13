@@ -297,6 +297,13 @@
             </summary>
             <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
         </member>
+        <member name="M:MusicStore.Controllers.MediaTypesController.GetMediaType(System.Int32)">
+            <summary>
+            This method will get a single media type.
+            </summary>
+            <param name="id">The media type ID.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> which contains a type of <see cref="T:MusicStore.Models.MediaType"/>.</returns>
+        </member>
         <member name="T:MusicStore.Controllers.PlaylistsController">
             <summary>
             This is the controller for the playlists.
@@ -366,6 +373,21 @@
             </summary>
             <param name="id">The playlist track ID.</param>
             <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.PlaylistTracksController.PutPlaylistTrack(System.Int32,MusicStore.Models.PlaylistTrack)">
+            <summary>
+            This method will update a playlist track.
+            </summary>
+            <param name="id">The playlist id.</param>
+            <param name="playlistTrack">The playlist track information.</param>
+            <returns>A unit of execution that contains the type of <see cref="T:Microsoft.AspNetCore.Mvc.IActionResult"/>.</returns>
+        </member>
+        <member name="M:MusicStore.Controllers.PlaylistTracksController.PostPlaylistTrack(MusicStore.Models.PlaylistTrack)">
+            <summary>
+            This method adds a new playlist track to the database.
+            </summary>
+            <param name="playlistTrack">The playlist track to add.</param>
+            <returns>A unit of execution that contains a type of <see cref="T:Microsoft.AspNetCore.Mvc.ActionResult"/> which contains the type of <see cref="T:MusicStore.Models.PlaylistTrack"/>.</returns>
         </member>
         <member name="T:MusicStore.Controllers.TracksController">
             <summary>

@@ -4,7 +4,9 @@
 
 namespace MusicStore.Controllers
 {
+    using System;
     using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
@@ -36,6 +38,24 @@ namespace MusicStore.Controllers
         public async Task<ActionResult<IEnumerable<MediaType>>> GetMediaTypes()
         {
             return await this.context.MediaTypes.ToListAsync().ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// This method will get a single media type.
+        /// </summary>
+        /// <param name="id">The media type ID.</param>
+        /// <returns>A unit of execution that contains a type of <see cref="ActionResult"/> which contains a type of <see cref="MediaType"/>.</returns>
+        [HttpGet("{id}")]
+        public async Task<ActionResult<MediaType>> GetMediaType(int id)
+        {
+            var mediaType = await this.context.MediaTypes.FindAsync(id).ConfigureAwait(false);
+
+            if (mediaType == null)
+            {
+                return this.NotFound();
+            }
+
+            return mediaType;
         }
     }
 }
